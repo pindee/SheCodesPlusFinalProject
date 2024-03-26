@@ -19,6 +19,10 @@ form {
   padding: 10px;
 }
 
+#Current-weather-condition {
+  text-transform: capitalize;
+}
+
 #cityInput {
   line-height: 14pt;
   width: 150px;

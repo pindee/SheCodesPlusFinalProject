@@ -1,4 +1,4 @@
-//Getting Date
+//Getting Date Do Not Touch
 function formatDate(date) {
   let day = date.getDay(); // Changed the variable name to 'day' to avoid duplicate declaration
   let minutes = date.getMinutes();
@@ -19,8 +19,8 @@ function formatDate(date) {
   return formattedDate + ", " + hours + ":" + minutes; // Removed the extra '+' after minutes and formatted the string correctly
 }
 
-//Changing the Weather
-//Adding Current Temperature
+//Changing the Weather Do Not Touch
+//Adding Current Temperature Do Not Touch
 function UpdateWeather(response) {
   console.log(response.data);
   let temperatureElement = document.querySelector(".current-temp");
@@ -48,7 +48,7 @@ function UpdateWeather(response) {
   icon.innerHTML =
     "<img class='main-emoji' src='" + response.data.condition.icon_url + "'/>";
 }
-//The API Call/Integration
+//The API Call/Integration Do Not Touch
 function searchCity(city) {
   let apiKey = "1abte8c00a79ddf038b756348o47c6af";
   let apiUrl =
@@ -61,7 +61,7 @@ function searchCity(city) {
   axios.get(apiUrl).then(UpdateWeather);
 }
 
-//Changing the City Name
+//Changing the City Name Do Not Touch
 function handleSearchSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#cityInput");
@@ -71,29 +71,6 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-//The Search Function
+//The Search Function Do Not Touch
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
-
-//function searchForecast() {
-//console.log("functionworks!");
-//let city = document.getElementById("cityInput").value;
-//// Get the API for Axios
-//}
-//function startTheProcess() {
-// Get the value of the input
-//const city = input.value;
-// Change the h1 text to the input value
-//cityName.textContent = city;
-// Clear the input field
-//input.value = "";
-//}
-//function getForecast(city) {
-//let apiKey = "ad47941082ao90b750fat7b2f455c3f0";
-//let apiUrl =
-//"https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric";
-//axios.get(apiUrl).then(weeklyForecast);
-//}
-//const form = document.querySelector("form");
-//const input = document.getElementById("cityInput");
-//const cityName = document.getElementById("cityName");
