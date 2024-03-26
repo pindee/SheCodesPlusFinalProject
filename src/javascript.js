@@ -52,10 +52,6 @@ function UpdateWeather(response) {
   let icon = document.querySelector("#weather-cond");
   icon.innerHTML =
     "<img class='main-emoji' src='" + response.data.condition.icon_url + "'/>";
-
-  //Forecast
-  let forecastDay1 = document.querySelector("#day1");
-  forecastDay1.innerHTML = displayForecast(date);
 }
 //The API Call/Integration Do Not Touch
 function searchCity(city) {
@@ -80,7 +76,7 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 //Forecast work - Week 8 WHERE I LEFT OFF - So Far, IT WORKS F*** YEAH!
-function displayForecast(){
+function displayForecast(response){
   let forecast = document.querySelector("#forecastWeather");
   let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
   forecastHTML = "";
@@ -98,12 +94,24 @@ forecastHTML = forecastHTML +
 </li>';
   })
   forecast.innerHTML = forecastHTML;
+  console.log(response.data);
+}
+
+function getForecast (city){
+    let apiKey = "1abte8c00a79ddf038b756348o47c6af";
+    let apiUrl =
+      "https://api.shecodes.io/weather/v1/forecast?query=" +
+      city +
+      "&key=" +
+      apiKey +
+      "&units=metric";
+  console.log(apiUrl);
+    axios.get(apiUrl).then(displayForecast);
 }
 
 //Everything to be run on start
 //The Search Function Do Not Touch
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
-displayForecast();
-
+getForecast("Paris");
 

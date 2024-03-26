@@ -13,10 +13,23 @@ body {
   transform: translate(-50%, -50%);
 }
 
+a{
+  color: #05576F;
+}
+
+a:hover{
+  font-weight: 700;
+}
+
+.day{
+  font-size: larger;
+}
+
 form {
   margin: auto;
   width: 50%;
   padding: 10px;
+  display: flex;
 }
 
 .temp {
@@ -28,28 +41,32 @@ form {
 }
 
 #cityInput {
-  line-height: 14pt;
-  width: 150px;
+  line-height: 19pt;
+  width: 500px;
   text-align: center;
-  border-color: teal;
-  border-radius: 10%;
+  border-color: #05576F;
   height: 25pt;
+  font-size: 18pt;
 }
 #cityInput:hover {
   background-color: #e8f0fe;
   cursor: text;
 }
 #CityButton {
-  background-color: teal;
+  background-color: #05576F;
   color: azure;
   border-radius: 10%;
-  height: 20pt;
-  width: 70pt;
+  height: 25pt;
+  width: 150pt;
   text-transform: uppercase;
+  margin-left: 20px;
+  padding: 8px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 #CityButton:hover {
   background-color: azure;
-  color: teal;
+  color: #05576F;
   cursor: pointer;
 }
 footer {
@@ -61,16 +78,25 @@ footer {
 
 h1 {
   font-weight: 500;
-  font-size: 30pt;
+  font-size: 60pt;
   margin: 30px;
+  color: #89833A !important;
+  font-family: 'Times New Roman', Times, serif !important;
 }
 
 p.current-temp {
-  font-size: 30pt;
+  font-weight: 500;
+  font-size: 60pt;
   margin: 30px;
+  color: #89833A !important;
+  font-family: 'Times New Roman', Times, serif !important;
   margin-right: 0px !important;
 }
 #current-unit {
+    font-weight: 500;
+  font-size: 60pt;
+  margin: 30px;
+  color: #89833A !important;
   font-size: 30pt;
   margin: 30px;
   margin-left: 0px !important;
@@ -82,7 +108,11 @@ label {
   margin-top: -55px !important;
   margin-left: 25px;
 }
-
+#EmmaLogo{
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+}
 div.current-weather {
   display: flex;
   padding: 0;
@@ -99,7 +129,8 @@ div.current-weather {
 }
 
 div.forecast-weather {
-  background-color: antiquewhite;
+  background-color: teal;
+  color: azure;
   width: 700px;
 }
 
@@ -113,7 +144,8 @@ html {
   align-content: center;
   align-self: center;
   vertical-align: middle;
-  justify-content: space=around;
+  justify-content: space-around;
+  background-color: #F6EBE6;
 }
 ul {
   display: flex;
