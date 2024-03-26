@@ -52,6 +52,8 @@ function UpdateWeather(response) {
   let icon = document.querySelector("#weather-cond");
   icon.innerHTML =
     "<img class='main-emoji' src='" + response.data.condition.icon_url + "'/>";
+
+    getForecast(response.data.city)
 }
 //The API Call/Integration Do Not Touch
 function searchCity(city) {
@@ -113,5 +115,5 @@ function getForecast (city){
 //The Search Function Do Not Touch
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
-getForecast("Paris");
+//getForecast("Paris");
 
