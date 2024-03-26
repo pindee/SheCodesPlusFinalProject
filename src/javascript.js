@@ -78,23 +78,44 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 //Forecast work - Week 8 WHERE I LEFT OFF - So Far, IT WORKS F*** YEAH!
+function formatForecastDay(timestamp){
+  let date = new Date (timestamp * 1000);
+  let days = [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+  ];
+  return days[date.getDay()]
+}
+
 function displayForecast(response){
   let forecast = document.querySelector("#forecastWeather");
-  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
   forecastHTML = "";
-  days.forEach(function (day) {
-forecastHTML = forecastHTML +
-  '<li>\
+  //temperature
+  response.data.daily.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      '<li>\
   <p class="day">' +
-  day +
-  '</p>\
-  <p class="emoji">☁️</p>\
+      formatForecastDay(day.time) +
+      '</p>\
+  <img class="emoji" src="' +
+      day.condition.icon_url +
+      '"/>\
   <p class="temp">\
-    <span class="mintemp">-15</span>°C\
-    <span class="maxtemp">-2</span>°C\
+    <span class="mintemp">' +
+      Math.round(day.temperature.minimum) +
+      '</span>°C\
+    <span class="maxtemp">' +
+      Math.round(day.temperature.maximum) +
+      "</span>°C\
   </p>\
-</li>';
-  })
+</li>";
+  });
   forecast.innerHTML = forecastHTML;
   console.log(response.data);
 }

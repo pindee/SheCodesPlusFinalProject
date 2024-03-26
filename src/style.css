@@ -13,6 +13,28 @@ body {
   transform: translate(-50%, -50%);
 }
 
+span.mintemp{
+  font-size: 10pt !important;
+  text-align: left;
+}
+span.maxtemp{
+  font-size: 10pt !important;
+  text-align: right;
+  margin-left: 20px;
+}
+
+p.temp{
+  font-size: 10pt !important;
+  display: flex;
+}
+
+img.emoji{
+  size-adjust: 50% !important;
+  width: 50px !important;
+  display: block;
+  margin: 0 auto;
+}
+
 a{
   color: #05576F;
 }
@@ -24,6 +46,7 @@ a:hover{
 .day{
   font-size: larger;
 }
+
 
 form {
   margin: auto;
@@ -130,13 +153,12 @@ div.current-weather {
 
 div.forecast-weather {
   background-color: teal;
+  opacity: 50%;
   color: azure;
   width: 700px;
 }
 
-.maxtemp {
-  margin-left: 20px;
-}
+
 
 html {
   width: 800px;
