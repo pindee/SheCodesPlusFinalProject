@@ -87,9 +87,7 @@ div.current-weather {
   line-height: 10pt;
 }
 .main-emoji {
-  font-size: 25pt;
-  line-height: 8pt;
-  margin: 25px;
+  margin-top: -10px;
 }
 
 div.forecast-weather {

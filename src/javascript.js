@@ -43,6 +43,10 @@ function UpdateWeather(response) {
   let date = new Date(response.data.time * 1000);
   let timeElement = document.querySelector("#time");
   timeElement.innerHTML = formatDate(date);
+  //Change Current Icon
+  let icon = document.querySelector("#weather-cond");
+  icon.innerHTML =
+    "<img class='main-emoji' src='" + response.data.condition.icon_url + "'/>";
 }
 //The API Call/Integration
 function searchCity(city) {
