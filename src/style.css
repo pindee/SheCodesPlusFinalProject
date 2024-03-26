@@ -19,6 +19,10 @@ form {
   padding: 10px;
 }
 
+.temp {
+  font-size: smaller;
+}
+
 #Current-weather-condition {
   text-transform: capitalize;
 }
@@ -96,6 +100,11 @@ div.current-weather {
 
 div.forecast-weather {
   background-color: antiquewhite;
+  width: 700px;
+}
+
+.maxtemp {
+  margin-left: 20px;
 }
 
 html {

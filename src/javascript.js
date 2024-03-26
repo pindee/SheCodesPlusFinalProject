@@ -16,7 +16,12 @@ function formatDate(date) {
   if (minutes < 10) {
     minutes = "0" + minutes;
   }
-  return formattedDate + ", " + hours + ":" + minutes; // Removed the extra '+' after minutes and formatted the string correctly
+  let meridian = "am";
+  if (hours > 12) {
+    hours = hours - "12";
+    meridian = "pm";
+  }
+  return formattedDate + ", " + hours + ":" + minutes + meridian; // Removed the extra '+' after minutes and formatted the string correctly
 }
 
 //Changing the Weather Do Not Touch
