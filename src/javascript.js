@@ -52,6 +52,10 @@ function UpdateWeather(response) {
   let icon = document.querySelector("#weather-cond");
   icon.innerHTML =
     "<img class='main-emoji' src='" + response.data.condition.icon_url + "'/>";
+
+  //Forecast
+  let forecastDay1 = document.querySelector("#day1");
+  forecastDay1.innerHTML = displayForecast(date);
 }
 //The API Call/Integration Do Not Touch
 function searchCity(city) {
@@ -75,7 +79,31 @@ function handleSearchSubmit(event) {
   //alert(searchInput.value);
   searchCity(searchInput.value);
 }
+//Forecast work - Week 8 WHERE I LEFT OFF - So Far, IT WORKS F*** YEAH!
+function displayForecast(){
+  let forecast = document.querySelector("#forecastWeather");
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  forecastHTML = "";
+  days.forEach(function (day) {
+forecastHTML = forecastHTML +
+  '<li>\
+  <p class="day">' +
+  day +
+  '</p>\
+  <p class="emoji">☁️</p>\
+  <p class="temp">\
+    <span class="mintemp">-15</span>°C\
+    <span class="maxtemp">-2</span>°C\
+  </p>\
+</li>';
+  })
+  forecast.innerHTML = forecastHTML;
+}
 
+//Everything to be run on start
 //The Search Function Do Not Touch
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
+displayForecast();
+
+
