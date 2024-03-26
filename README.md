@@ -1,2 +1,2 @@
 # SheCodesPlusFinalProject
- 3/25/2024
+In the SheCodes Plus course, I learned advanced HTML and CSS, including revision and advanced elements. I also covered HTML forms, multiple file management, and advanced VS Code tips. In the following weeks, I delved into JavaScript data types, functions, debugging, and events. I learned about API integration, AJAX, and using weather APIs. Additionally, I learned about development workflows, including Git, GitHub, hosting, and deployment with Netlify. The final weeks focused on building Vanilla JS projects, including a weather search and weather forecast application. Throughout the course, I completed homework assignments to practice and reinforce my learning.
